@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+   <script src="https://code.jquery.com/jquery-2.1.1.js" ></script>
+ </head>
+ <body>
+   <h1>My Booklist</h1>
+
+   <ul>
+     <li>Fitzgerald: The Great Gatsby <span id="nickname"></span>
+     <li>Hemingway: The Sun Also Rises <span id="favorites"></span>
+     <li>Trump: The Art of the Deal <span id="hometown"></span>
+   </ul>
+
+ </body>
+ <script>
+var books =  [
+{title: 'The Great Gatsby',
+author: 'Fitzgerald',
+alreadyRead: true
+},
+{title: 'The Station Agent',
+  author: 'Joseph Campbell',
+  alreadyRead: false
+  }];
+
+for (var i = 0; i < books.length; i++) {
+  var bookP = document.createElement('p');
+  var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+  bookP.appendChild(bookDescription);
+  document.body.appendChild(bookP);
+
+  var bookList = document.createElement('ul');
+for (var i = 0; i < books.length; i++) {
+  var bookItem = document.createElement('li');
+  var bookImg = document.createElement('img');
+  bookImg.src = books[i].img;
+  bookItem.appendChild(bookImg);
+  var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+  bookItem.appendChild(bookDescription);
+  if (books[i].alreadyRead) {
+    bookItem.style.color = 'red';
+  }
+  bookList.appendChild(bookItem);
+}
+document.body.appendChild(bookList);
+}
+// $var obj = {
+//   "flammable": "inflammable",
+//   "duh": "no duh"
+// };
+// $.each( obj, function( key, value ) {
+//   alert( key + ": " + value );
+// });
+</script>
+ </html>
