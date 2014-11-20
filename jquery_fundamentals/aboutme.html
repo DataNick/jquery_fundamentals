@@ -6,7 +6,7 @@
    <script src="https://code.jquery.com/jquery-2.1.1.js" ></script>
  </head>
  <body>
-   <h1>About Me</h1>
+   <h1>Book list</h1>
 
    <ul>
      <li>Nickname: <span id="nickname"></span>
@@ -17,6 +17,20 @@
  </body>
  <script>
 
-$('body').css({'background-color': 'red'});
+$('body').css({'font': 'red'});
+
+var nick = document.getElementById('nickname');
+nick.textContent = "Nick";
+var fav = document.getElementById('favorites');
+fav.textContent = "Cakes";
+var home = document.getElementById('hometown');
+home.textContent = "Georgetown";
+
+var lis = document.getElementsByTagName('li')
+for (var i = 0; i < lis.length; i++){
+  lis[i].classList.add('listitem');
+};
+
+
 </script>
  </html>
