@@ -16,19 +16,28 @@
 // Change the text in the span, a child of "#target"
 // Hint: you can use .text
 
-$(document).ready(function (){
-	$('span').text('I am a butterfly');
-});
+// $(document).ready(function (){
+// 	$('span').text('I am a butterfly');
+// });
 
 // EXERCISE: Create Clone
 
 // Create a clone of the span in "#target" and position it under the origin.
 // Hint: you can use .clone and .insertAfter
 
+// $(document).ready(function() {
+//   $('span').clone().insertAfter('#target');
+// });
+
+
 // EXERCISE: Use Filter
 
 // Change background color of the second ".target"
 // Hint: you can use .eq and .css
+
+$(document).ready(function(){
+	$('.target').eq(1).css('background-color', 'red');
+});
 
 // EXERCISE: Disable Buttons
 
